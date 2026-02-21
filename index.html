@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>글로컬 비즈니스 브릿지 | CBMC 김해한마음지회</title>
+<meta name="description" content="기업인·중소상공인·이주민을 잇는 신뢰의 비즈니스 생태계. CBMC 김해한마음지회가 만드는 3자 연결 플랫폼.">
+<meta name="keywords" content="CBMC,김해,비즈니스브릿지,기업네트워킹,중소상공인,이주민,베트남무역,인력소개,글로컬">
+<meta name="author" content="엘림G선교회">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:title" content="글로컬 비즈니스 브릿지 | CBMC 김해한마음지회">
+<meta property="og:description" content="기업인·중소상공인·이주민을 잇는 신뢰의 비즈니스 생태계">
+<meta property="og:locale" content="ko_KR">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Nanum+Myeongjo:wght@400;700;800&display=swap" rel="stylesheet">
+<!-- GA4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7MP3H919FH"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-7MP3H919FH');</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+--nd:#0a1f35;--nm:#1a4b7a;--nl:#2e6ea6;
+--g:#b8892e;--gl:#d4a94a;--gp:#f0e2c4;
+--w:#fff;--ow:#faf9f7;--wm:#f8f5f0;
+--g1:#f4f3f0;--g2:#e5e3de;--g5:#8a8680;--g7:#4a4742;--tx:#2a2724;
+--r:14px;--rs:8px;--e:cubic-bezier(.25,.46,.45,.94)
+}
+html{scroll-behavior:smooth}
+body{font-family:'Noto Sans KR',sans-serif;color:var(--tx);line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+img{max-width:100%;display:block}
+
+/* NAV */
+.nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:.8rem 2rem;display:flex;align-items:center;justify-content:space-between;background:rgba(10,31,53,.92);backdrop-filter:blur(12px);border-bottom:1px solid rgba(184,137,46,.15);transition:all .4s}
+.nav-logo{font-family:'Nanum Myeongjo',serif;font-size:1rem;font-weight:800;color:var(--w);text-decoration:none;display:flex;align-items:center;gap:.5rem}
+.nav-logo span{color:var(--gl);font-size:.65rem;letter-spacing:2px;text-transform:uppercase;font-family:'Noto Sans KR',sans-serif;font-weight:600}
+.nav-links{display:flex;gap:1.5rem;align-items:center}
+.nav-links a{color:rgba(255,255,255,.7);font-size:.78rem;font-weight:500;text-decoration:none;transition:color .3s}
+.nav-links a:hover{color:var(--gl)}
+.nav-back{padding:6px 16px;border-radius:20px;background:rgba(184,137,46,.15);color:var(--gl);font-size:.72rem;font-weight:600;text-decoration:none;border:1px solid rgba(184,137,46,.3);transition:all .3s}
+.nav-back:hover{background:var(--g);color:var(--w)}
+.mb{display:none;background:none;border:none;cursor:pointer;padding:4px}
+.mb svg{width:24px;height:24px;fill:var(--w)}
+
+/* MOBILE MENU */
+.mm{position:fixed;top:0;left:0;right:0;bottom:0;z-index:200;background:rgba(10,31,53,.98);backdrop-filter:blur(20px);display:none;flex-direction:column;align-items:center;justify-content:center;gap:1.5rem}
+.mm.open{display:flex}
+.mm a{color:var(--w);font-size:1.1rem;font-weight:600;text-decoration:none;transition:color .3s}
+.mm a:hover{color:var(--gl)}
+.mm-close{position:absolute;top:1.2rem;right:1.5rem;background:none;border:none;color:var(--w);font-size:1.8rem;cursor:pointer}
+
+/* SECTION COMMON */
+.sec{padding:90px 2.5rem}
+.si{max-width:1100px;margin:0 auto}
+.sh{text-align:center;margin-bottom:2.5rem}
+.sl{font-size:.6rem;letter-spacing:3px;text-transform:uppercase;color:var(--g);font-weight:700;display:block;margin-bottom:.5rem}
+.st{font-family:'Nanum Myeongjo',serif;font-size:clamp(1.5rem,3vw,2rem);font-weight:800;color:var(--nd);line-height:1.4;margin-bottom:.6rem}
+.sd{font-size:.88rem;color:var(--g5);line-height:1.7;max-width:600px;margin:0 auto}
+
+/* REVEAL ANIMATION */
+.rv{opacity:0;transform:translateY(30px);transition:opacity .8s var(--e),transform .8s var(--e)}
+.rv.vis{opacity:1;transform:translateY(0)}
+
+/* LANG SWITCH */
+.lang-sw{display:flex;gap:4px}
+.lang-sw button{padding:3px 8px;border-radius:4px;border:1px solid rgba(255,255,255,.2);background:transparent;color:rgba(255,255,255,.6);font-size:.6rem;cursor:pointer;transition:all .3s}
+.lang-sw button.active{background:var(--g);color:var(--w);border-color:var(--g)}
+
+/* RESPONSIVE */
+@media(max-width:1024px){
+.sec{padding:70px 1.8rem}
+[style*="grid-template-columns:repeat(3"]{grid-template-columns:repeat(2,1fr)!important}
+[style*="grid-template-columns:repeat(4"]{grid-template-columns:repeat(2,1fr)!important}
+}
+@media(max-width:768px){
+.sec{padding:60px 1.2rem}
+.nav-links{display:none}
+.mb{display:block}
+[style*="grid-template-columns:repeat(3"]{grid-template-columns:1fr!important}
+[style*="grid-template-columns:repeat(2"]{grid-template-columns:1fr!important}
+[style*="grid-template-columns:repeat(4"]{grid-template-columns:repeat(2,1fr)!important}
+#biz-grid{grid-template-columns:1fr!important}
+.hero-cta{flex-direction:column;align-items:center}
+.hero-cta a{width:100%;text-align:center}
+}
+</style>
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<nav class="nav">
+<a href="#" class="nav-logo">글로컬 비즈니스 브릿지 <span>CBMC</span></a>
+<div class="nav-links">
+<a href="#vision">비전</a>
+<a href="#enterprise">기업인</a>
+<a href="#smallbiz">중소상공인</a>
+<a href="#migrant">이주민</a>
+<a href="#team">운영진</a>
+<a href="#contact">문의</a>
+<div class="lang-sw">
+<button class="active" onclick="switchLang('ko')">🇰🇷</button>
+<button onclick="switchLang('en')">🇺🇸</button>
+<button onclick="switchLang('vi')">🇻🇳</button>
+</div>
+<a href="https://gimhae-cbmc.netlify.app" class="nav-back" target="_blank">← 메인 사이트</a>
+</div>
+<button class="mb" onclick="document.getElementById('mm').classList.add('open')"><svg viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg></button>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mm" id="mm">
+<button class="mm-close" onclick="this.parentElement.classList.remove('open')">&times;</button>
+<a href="#vision" onclick="this.parentElement.classList.remove('open')">비전</a>
+<a href="#enterprise" onclick="this.parentElement.classList.remove('open')">기업인 허브</a>
+<a href="#smallbiz" onclick="this.parentElement.classList.remove('open')">중소상공인 연결</a>
+<a href="#migrant" onclick="this.parentElement.classList.remove('open')">이주민 연계</a>
+<a href="#team" onclick="this.parentElement.classList.remove('open')">운영진</a>
+<a href="#contact" onclick="this.parentElement.classList.remove('open')">문의하기</a>
+<a href="https://gimhae-cbmc.netlify.app" target="_blank" style="color:var(--gl)">← 메인 사이트</a>
+</div>
+
+<!-- ==================== SECTION 1: HERO ==================== -->
+<section style="background:linear-gradient(135deg,#0a1f35 0%,#122d4a 50%,#1a4b7a 100%);padding:140px 2.5rem 100px;color:var(--w);text-align:center;position:relative;overflow:hidden" id="hero">
+<div style="position:absolute;top:-100px;right:-100px;width:400px;height:400px;border-radius:50%;background:rgba(184,137,46,.04)"></div>
+<div style="position:absolute;bottom:-80px;left:-80px;width:300px;height:300px;border-radius:50%;background:rgba(184,137,46,.03)"></div>
+<div class="si rv">
+<div style="font-size:.6rem;letter-spacing:4px;text-transform:uppercase;color:var(--gl);font-weight:700;margin-bottom:1rem">Glocal Business Bridge</div>
+<h1 style="font-family:'Nanum Myeongjo',serif;font-size:clamp(1.6rem,4vw,2.6rem);font-weight:800;line-height:1.5;margin-bottom:1rem" data-i="hero_t">기업인 · 중소상공인 · 이주민을<br>잇는 신뢰의 비즈니스 생태계</h1>
+<p style="font-size:.92rem;color:rgba(255,255,255,.55);max-width:550px;margin:0 auto 2rem;line-height:1.8" data-i="hero_d">CBMC 김해한마음지회가 만드는 3자 연결 플랫폼.<br>신뢰와 기도로 연결된 비즈니스 파트너십을 경험하십시오.</p>
+<div class="hero-cta" style="display:flex;gap:.7rem;justify-content:center;flex-wrap:wrap">
+<a href="#enterprise" style="padding:14px 28px;border-radius:28px;background:var(--g);color:var(--w);font-size:.85rem;font-weight:700;text-decoration:none;transition:all .3s" onmouseover="this.style.background='var(--gl)'" onmouseout="this.style.background='var(--g)'">🏢 기업 네트워킹</a>
+<a href="#smallbiz" style="padding:14px 28px;border-radius:28px;background:rgba(255,255,255,.08);color:rgba(255,255,255,.85);border:1px solid rgba(255,255,255,.18);font-size:.85rem;font-weight:600;text-decoration:none;transition:all .3s" onmouseover="this.style.background='rgba(255,255,255,.15)'" onmouseout="this.style.background='rgba(255,255,255,.08)'">💼 중소상공인 연결</a>
+<a href="#migrant" style="padding:14px 28px;border-radius:28px;background:rgba(255,255,255,.08);color:rgba(255,255,255,.85);border:1px solid rgba(255,255,255,.18);font-size:.85rem;font-weight:600;text-decoration:none;transition:all .3s" onmouseover="this.style.background='rgba(255,255,255,.15)'" onmouseout="this.style.background='rgba(255,255,255,.08)'">🌏 이주민 연계</a>
+</div>
+</div>
+</section>
+
+<!-- ==================== SECTION 2: 3자 연결 비전 ==================== -->
+<section class="sec" style="background:var(--wm)" id="vision">
+<div class="si">
+<div class="sh rv">
+<span class="sl">Our Vision</span>
+<h2 class="st" data-i="vis_t">3자 연결 비전</h2>
+<p class="sd" data-i="vis_d">세 축이 서로 연결되어 시너지를 만드는 비즈니스 생태계</p>
+</div>
+
+<!-- 비전 선언 박스 -->
+<div class="rv" style="max-width:800px;margin:0 auto 3rem;padding:2.5rem;background:linear-gradient(135deg,var(--nd),#1a4b7a);border-radius:var(--r);color:var(--w);text-align:center;position:relative;overflow:hidden">
+<div style="position:absolute;top:-40px;right:-40px;width:150px;height:150px;border-radius:50%;background:rgba(184,137,46,.06)"></div>
+<div style="font-size:.6rem;letter-spacing:3px;text-transform:uppercase;color:var(--gl);font-weight:700;margin-bottom:.8rem">Vision Declaration</div>
+<h3 style="font-family:'Nanum Myeongjo',serif;font-size:clamp(1.1rem,2.5vw,1.5rem);font-weight:800;line-height:1.6;margin-bottom:1rem" data-i="vis_dec">"일터에서 하나님 나라를 세우는<br>비즈니스 생태계를 만들어 갑니다"</h3>
+<p style="font-size:.85rem;color:rgba(255,255,255,.55);line-height:1.8;max-width:550px;margin:0 auto" data-i="vis_decd">CBMC 김해한마음지회 회원 기업들은 단순한 네트워크가 아닙니다.<br>신뢰와 기도로 연결된 비즈니스 파트너로서,<br>기업인·중소상공인·이주민이 함께 성장하는 생태계를 세워갑니다.</p>
+</div>
+
+<!-- 3자 연결 카드 -->
+<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem" class="rv">
+<div style="padding:2rem;border-radius:var(--r);background:var(--w);border:2px solid var(--g2);text-align:center;transition:all .35s" onmouseover="this.style.borderColor='var(--gl)';this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 40px rgba(184,137,46,.1)'" onmouseout="this.style.borderColor='var(--g2)';this.style.transform='';this.style.boxShadow=''">
+<div style="font-size:2.2rem;margin-bottom:.8rem">🏢 ↔ 💼</div>
+<h4 style="font-size:.95rem;font-weight:800;color:var(--nd);margin-bottom:.5rem" data-i="v1t">기업인 ↔ 중소상공인</h4>
+<p style="font-size:.78rem;color:var(--g5);line-height:1.7" data-i="v1d">거래처 확보 · 공동 마케팅 · 전문가 자문<br>대기업-소상공인 상생 협력 모델</p>
+</div>
+<div style="padding:2rem;border-radius:var(--r);background:var(--w);border:2px solid var(--g2);text-align:center;transition:all .35s" onmouseover="this.style.borderColor='var(--gl)';this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 40px rgba(184,137,46,.1)'" onmouseout="this.style.borderColor='var(--g2)';this.style.transform='';this.style.boxShadow=''">
+<div style="font-size:2.2rem;margin-bottom:.8rem">🏢 ↔ 🌏</div>
+<h4 style="font-size:.95rem;font-weight:800;color:var(--nd);margin-bottom:.5rem" data-i="v2t">기업인 ↔ 이주민</h4>
+<p style="font-size:.78rem;color:var(--g5);line-height:1.7" data-i="v2d">인력 매칭 · 무역 연계 · 문화 교류<br>한-베 비즈니스 파트너십</p>
+</div>
+<div style="padding:2rem;border-radius:var(--r);background:var(--w);border:2px solid var(--g2);text-align:center;transition:all .35s" onmouseover="this.style.borderColor='var(--gl)';this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 40px rgba(184,137,46,.1)'" onmouseout="this.style.borderColor='var(--g2)';this.style.transform='';this.style.boxShadow=''">
+<div style="font-size:2.2rem;margin-bottom:.8rem">💼 ↔ 🌏</div>
+<h4 style="font-size:.95rem;font-weight:800;color:var(--nd);margin-bottom:.5rem" data-i="v3t">중소상공인 ↔ 이주민</h4>
+<p style="font-size:.78rem;color:var(--g5);line-height:1.7" data-i="v3d">고용 연결 · 창업 지원 · 통역 서비스<br>다문화 비즈니스 협력</p>
+</div>
+</div>
+
+<!-- 중심 매개 -->
+<div class="rv" style="text-align:center;margin-top:1.8rem;padding:1.2rem;background:linear-gradient(135deg,rgba(184,137,46,.06),rgba(184,137,46,.02));border-radius:var(--r);border:1px solid rgba(184,137,46,.15)">
+<p style="font-size:.88rem;font-weight:700;color:var(--g)" data-i="vis_center">🛡️ 중심에 CBMC 신뢰 네트워크가 매개합니다</p>
+<p style="font-size:.75rem;color:var(--g5);margin-top:.3rem" data-i="vis_centerD">매주 함께 기도하고 식사하며 쌓은 신뢰가 모든 비즈니스 연결의 기반입니다.</p>
+</div>
+</div>
+</section>
+
+<!-- ==================== SECTION 3: 기업인 허브 ==================== -->
+<section class="sec" style="background:var(--w)" id="enterprise">
+<div class="si">
+<div class="sh rv">
+<span class="sl">Enterprise Hub</span>
+<h2 class="st" data-i="ent_t">🏢 회원 기업 디렉토리</h2>
+<p class="sd" data-i="ent_d">CBMC 김해한마음지회 신뢰 기반의 비즈니스 파트너를 만나보십시오</p>
+</div>
+
+<!-- 카테고리 필터 -->
+<div class="rv" style="display:flex;gap:6px;justify-content:center;margin-bottom:1.8rem;flex-wrap:wrap">
+<button onclick="filterBiz('all')" class="biz-tab active" style="padding:7px 18px;border-radius:20px;border:1.5px solid var(--g2);background:var(--nd);color:var(--w);font-size:.74rem;font-weight:600;cursor:pointer;transition:all .3s">전체</button>
+<button onclick="filterBiz('mfg')" class="biz-tab" style="padding:7px 18px;border-radius:20px;border:1.5px solid var(--g2);background:transparent;color:var(--nd);font-size:.74rem;font-weight:600;cursor:pointer;transition:all .3s">🏭 제조</button>
+<button onclick="filterBiz('svc')" class="biz-tab" style="padding:7px 18px;border-radius:20px;border:1.5px solid var(--g2);background:transparent;color:var(--nd);font-size:.74rem;font-weight:600;cursor:pointer;transition:all .3s">💼 서비스</button>
+<button onclick="filterBiz('med')" class="biz-tab" style="padding:7px 18px;border-radius:20px;border:1.5px solid var(--g2);background:transparent;color:var(--nd);font-size:.74rem;font-weight:600;cursor:pointer;transition:all .3s">🏥 의료</button>
+<button onclick="filterBiz('edu')" class="biz-tab" style="padding:7px 18px;border-radius:20px;border:1.5px solid var(--g2);background:transparent;color:var(--nd);font-size:.74rem;font-weight:600;cursor:pointer;transition:all .3s">🎓 교육</button>
+<button onclick="filterBiz('pro')" class="biz-tab" style="padding:7px 18px;border-radius:20px;border:1.5px solid var(--g2);background:transparent;color:var(--nd);font-size:.74rem;font-weight:600;cursor:pointer;transition:all .3s">⚖️ 전문직</button>
+</div>
+
+<!-- 기업 카드 그리드 -->
+<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem" id="biz-grid">
+
+<!-- 반석인더스트리즈 -->
+<div class="biz-card" data-bc="mfg" style="background:var(--w);border-radius:var(--r);overflow:hidden;border:1px solid var(--g2);transition:all .35s" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 40px rgba(10,31,53,.1)';this.style.borderColor='rgba(184,137,46,.3)'" onmouseout="this.style.transform='';this.style.boxShadow='';this.style.borderColor='var(--g2)'">
+<div style="padding:1.4rem"><div style="display:flex;align-items:center;gap:.8rem;margin-bottom:.8rem"><div style="width:44px;height:44px;border-radius:10px;background:linear-gradient(135deg,#e8f5e9,#c8e6c9);display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0">🏭</div><div><div style="font-size:.55rem;letter-spacing:2px;font-weight:700;text-transform:uppercase;color:var(--g)">Manufacturing</div><h4 style="font-size:.92rem;font-weight:800;color:var(--nd);line-height:1.3">반석인더스트리즈(주)</h4></div></div>
+<div style="font-size:.72rem;color:var(--g5);margin-bottom:.2rem"><b style="color:var(--g7)">대표:</b> 서재찬 박사</div>
+<div style="font-size:.72rem;color:var(--g5);margin-bottom:.6rem"><b style="color:var(--g7)">분야:</b> 제조업 · 산업용 설비</div>
+<p style="font-size:.73rem;color:var(--g5);line-height:1.6;margin-bottom:.8rem">경남 김해시 장유로 소재 제조기업. CBMC 조찬포럼 장소를 제공하는 킹덤컴파니.</p>
+<div style="display:flex;gap:4px;flex-wrap:wrap"><span style="padding:2px 8px;border-radius:4px;background:rgba(26,75,122,.06);font-size:.6rem;color:var(--nm);font-weight:600">제조</span><span style="padding:2px 8px;border-radius:4px;background:rgba(184,137,46,.06);font-size:.6rem;color:var(--g);font-weight:600">포럼장소</span></div>
+</div><a href="#contact" style="display:block;padding:.55rem;background:var(--g1);text-align:center;font-size:.72rem;font-weight:600;color:var(--nm);text-decoration:none;transition:all .3s" onmouseover="this.style.background='var(--nd)';this.style.color='var(--w)'" onmouseout="this.style.background='var(--g1)';this.style.color='var(--nm)'">비즈니스 연결 문의 →</a></div>
+
+<!-- 삼성생명 / 네이처셀 -->
+<div class="biz-card" data-bc="svc" style="background:var(--w);border-radius:var(--r);overflow:hidden;border:1px solid var(--g2);transition:all .35s" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 40px rgba(10,31,53,.1)';this.style.borderColor='rgba(184,137,46,.3)'" onmouseout="this.style.transform='';this.style.boxShadow='';this.style.borderColor='var(--g2)'">
+<div style="padding:1.4rem"><div style="display:flex;align-items:center;gap:.8rem;margin-bottom:.8rem"><div style="width:44px;height:44px;border-radius:10px;background:linear-gradient(135deg,#e3f2fd,#bbdefb);display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0">🛡️</div><div><div style="font-size:.55rem;letter-spacing:2px;font-weight:700;text-transform:uppercase;color:var(--g)">Insurance · Biotech</div><h4 style="font-size:.92rem;font-weight:800;color:var(--nd);line-height:1.3">삼성생명 / 네이처셀</h4></div></div>
+<div style="font-size:.72rem;color:var(--g5);margin-bottom:.2rem"><b style="color:var(--g7)">대표:</b> 배병옥 회장</div>
+<div style="font-size:.72rem;color:var(--g5);margin-bottom:.6rem"><b style="color:var(--g7)">분야:</b> 보험 · 바이오헬스</div>
+<p style="font-size:.73rem;color:var(--g5);line-height:1.6;margin-bottom:.8rem">생명보험 자산관리와 바이오 헬스케어 전문. CBMC 김해한마음지회 회장.</p>
+<div style="display:flex;gap:4px;flex-wrap:wrap"><span style="padding:2px 8px;border-radius:4px;background:rgba(33,150,243,.06);font-size:.6rem;color:#1976d2;font-weight:600">보험</span><span style="padding:2px 8px;border-radius:4px;background:rgba(76,175,80,.06);font-size:.6rem;color:#388e3c;font-weight:600">바이오</span></div>
+</div><a href="#contact" style="display:block;padding:.55rem;background:var(--g1);text-align:center;font-size:.72rem;font-weight:600;color:var(--nm);text-decoration:none;transition:all .3s" onmouseover="this.style.background='var(--nd)';this.style.color='var(--w)'" onmouseout="this.style.background='var(--g1)';this.style.color='var(--nm)'">비즈니스 연결 문의 →</a></div>
+
+<!-- 켐텍 -->
+<div class="biz-card" data-bc="mfg" style="background:var(--w);border-radius:var(--r);overflow:hidden;border:1px solid var(--g2);transition:all .35s" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 40px rgba(10,31,53,.1)';this.style.borderColor='rgba(184,137,46,.3)'" onmouseout="this.style.transform='';this.style.boxShadow='';this.style.borderColor='var(--g2)'">
+<div style="padding:1.4rem"><div style="display:flex;align-items:center;gap:.8rem;margin-bottom:.8rem"><div style="width:44px;height:44px;border-radius:10px;background:linear-gradient(135deg,#fff3e0,#ffe0b2);display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0">🧪</div><div><div style="font-size:.55rem;letter-spacing:2px;font-weight:700;text-transform:uppercase;color:var(--g)">Chemicals</div><h4 style="font-size:.92rem;font-weight:800;color:var(--nd);line-height:1.3">켐텍</h4></div></div>
+<div style="font-size:.72rem;color:var(--g5);margin-bottom:.2rem"><b style="color:var(--g7)">대표:</b> 김도현 부회장</div>
+<div style="font-size:.72rem;color:var(--g5);margin-bottom:.6rem"><b style="color:var(--g7)">분야:</b> 화학소재 · 산업화학</div>
+<p style="font-size:.73rem;color:var(--g5);line-height:1.6;margin-bottom:.8rem">화학소재 전문기업. 산업용 화학 제품 및 소재 공급.</p>
+<div style="display:flex;gap:4px;flex-wrap:wrap"><span style="padding:2px 8px;border-radius:4px;background:rgba(255,152,0,.06);font-size:.6rem;color:#e65100;font-weight:600">화학</span><span style="padding:2px 8px;border-radius:4px;background:rgba(26,75,122,.06);font-size:.6rem;color:var(--nm);font-weight:600">소재</span></div>
+</div><a href="#contact" style="display:block;padding:.55rem;background:var(--g1);text-align:center;font-size:.72rem;font-weight:600;color:var(--nm);text-decoration:none;transition:all .3s" onmouseover="this.style.background='var(--nd)';this.style.color='var(--w)'" onmouseout="this.style.background='var(--g1)';this.style.color='var(--nm)'">비즈니스 연결 문의 →</a></div>
+
+<!-- 정밀인쇄 -->
+<div class="biz-card" data-bc="svc" style="background:var(--w);border-radius:var(--r);overflow:hidden;border:1px solid var(--g2);transition:all .35s" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 40px rgba(10,31,53,.1)';this.style.borderColor='rgba(184,137,46,.3)'" onmouseout="this.style.transform='';this.style.boxShadow='';this.style.borderColor='var(--g2)'">
+<div style="padding:1.4rem"><div style="display:flex;align-items:center;gap:.8rem;margin-bottom:.8rem"><div style="width:44px;height:44px;border-radius:10px;background:linear-gradient(135deg,#fce4ec,#f8bbd0);display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0">📄</div><div><div style="font-size:.55rem;letter-spacing:2px;font-weight:700;text-transform:uppercase;color:var(--g)">Printing</div><h4 style="font-size:.92rem;font-weight:800;color:var(--nd);line-height:1.3">정밀인쇄</h4></div></div>
+<div style="font-size:.72rem;color:var(--g5);margin-bottom:.2rem"><b style="color:var(--g7)">대표:</b> 임명식 총무</div>
+<div style="font-size:.72rem;color:var(--g5);margin-bottom:.6rem"><b style="color:var(--g7)">분야:</b> 인쇄 · 출판</div>
+<p style="font-size:.73rem;color:var(--g5);line-height:1.6;margin-bottom:.8rem">고품질 인쇄 서비스 제공. 기업 홍보물, 명함, 카탈로그 등 맞춤 제작.</p>
+<div style="display:flex;gap:4px;flex-wrap:wrap"><span style="padding:2px 8px;border-radius:4px;background:rgba(233,30,99,.06);font-size:.6rem;color:#c2185b;font-weight:600">인쇄</span><span style="padding:2px 8px;border-radius:4px;background:rgba(26,75,122,.06);font-size:.6rem;color:var(--nm);font-weight:600">출판</span></div>
+</div><a href="#contact" style="display:block;padding:.55rem;background:var(--g1);text-align:center;font-size:.72rem;font-weight:600;color:var(--nm);text-decoration:none;transition:all .3s" onmouseover="this.style.background='var(--nd)';this.style.color='var(--w)'" onmouseout="this.style.background='var(--g1)';this.style.color='var(--nm)'">비즈니스 연결 문의 →</a></div>
+
+<!-- 여명라이팅 -->
+<div class="biz-card" data-bc="mfg" style="background:var(--w);border-radius:var(--r);overflow:hidden;border:1px solid var(--g2);transition:all .35s" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 40px rgba(10,31,53,.1)';this.style.borderColor='rgba(184,137,46,.3)'" onmouseout="this.style.transform='';this.style.boxShadow='';this.style.borderColor='var(--g2)'">
+<div style="padding:1.4rem"><div style="display:flex;align-items:center;gap:.8rem;margin-bottom:.8rem"><div style="width:44px;height:44px;border-radius:10px;background:linear-gradient(135deg,#fffde7,#fff9c4);display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0">💡</div><div><div style="font-size:.55rem;letter-spacing:2px;font-weight:700;text-transform:uppercase;color:var(--g)">Lighting</div><h4 style="font-size:.92rem;font-weight:800;color:var(--nd);line-height:1.3">여명라이팅(주)</h4></div></div>
+<div style="font-size:.72rem;color:var(--g5);margin-bottom:.2rem"><b style="color:var(--g7)">대표:</b> 권종희</div>
+<div style="font-size:.72rem;color:var(--g5);margin-bottom:.6rem"><b style="color:var(--g7)">분야:</b> 조명 · 전기설비</div>
+<p style="font-size:.73rem;color:var(--g5);line-height:1.6;margin-bottom:.8rem">산업용·상업용 조명 설비 전문기업. LED 조명, 전기 공사.</p>
+<div style="display:flex;gap:4px;flex-wrap:wrap"><span style="padding:2px 8px;border-radius:4px;background:rgba(255,235,59,.1);font-size:.6rem;color:#f57f17;font-weight:600">조명</span><span style="padding:2px 8px;border-radius:4px;background:rgba(26,75,122,.06);font-size:.6rem;color:var(--nm);font-weight:600">전기</span></div>
+</div><a href="#contact" style="display:block;padding:.55rem;background:var(--g1);text-align:center;font-size:.72rem;font-weight:600;color:var(--nm);text-decoration:none;transition:all .3s" onmouseover="this.style.background='var(--nd)';this.style.color='var(--w)'" onmouseout="this.style.background='var(--g1)';this.style.color='var(--nm)'">비즈니스 연결 문의 →</a></div>
+
+<!-- 자연힐 한방병원 -->
+<div class="biz-card" data-bc="med" style="background:var(--w);border-radius:var(--r);overflow:hidden;border:1px solid var(--g2);transition:all .35s" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 40px rgba(10,31,53,.1)';this.style.borderColor='rgba(184,137,46,.3)'" onmouseout="this.style.transform='';this.style.boxShadow='';this.style.borderColor='var(--g2)'">
+<div style="padding:1.4rem"><div style="display:flex;align-items:center;gap:.8rem;margin-bottom:.8rem"><div style="width:44px;height:44px;border-radius:10px;background:linear-gradient(135deg,#e8f5e9,#c8e6c9);display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0">🏥</div><div><div style="font-size:.55rem;letter-spacing:2px;font-weight:700;text-transform:uppercase;color:var(--g)">Healthcare</div><h4 style="font-size:.92rem;font-weight:800;color:var(--nd);line-height:1.3">자연힐 한방병원</h4></div></div>
+<div style="font-size:.72rem;color:var(--g5);margin-bottom:.2rem"><b style="color:var(--g7)">원장:</b> 임성택 한의박사</div>
+<div style="font-size:.72rem;color:var(--g5);margin-bottom:.6rem"><b style="color:var(--g7)">분야:</b> 한방의료 · 재활</div>
+<p style="font-size:.73rem;color:var(--g5);line-height:1.6;margin-bottom:.8rem">한방 치료·재활 전문 의료기관. 직원 건강관리 프로그램 연계 가능.</p>
+<div style="display:flex;gap:4px;flex-wrap:wrap"><span style="padding:2px 8px;border-radius:4px;background:rgba(76,175,80,.06);font-size:.6rem;color:#388e3c;font-weight:600">한방</span><span style="padding:2px 8px;border-radius:4px;background:rgba(26,75,122,.06);font-size:.6rem;color:var(--nm);font-weight:600">의료</span></div>
+</div><a href="#contact" style="display:block;padding:.55rem;background:var(--g1);text-align:center;font-size:.72rem;font-weight:600;color:var(--nm);text-decoration:none;transition:all .3s" onmouseover="this.style.background='var(--nd)';this.style.color='var(--w)'" onmouseout="this.style.background='var(--g1)';this.style.color='var(--nm)'">비즈니스 연결 문의 →</a></div>
+
+<!-- 메타글로벌 파트너스 -->
+<div class="biz-card" data-bc="svc" style="background:var(--w);border-radius:var(--r);overflow:hidden;border:1px solid var(--g2);transition:all .35s" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 40px rgba(10,31,53,.1)';this.style.borderColor='rgba(184,137,46,.3)'" onmouseout="this.style.transform='';this.style.boxShadow='';this.style.borderColor='var(--g2)'">
+<div style="padding:1.4rem"><div style="display:flex;align-items:center;gap:.8rem;margin-bottom:.8rem"><div style="width:44px;height:44px;border-radius:10px;background:linear-gradient(135deg,#e3f2fd,#bbdefb);display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0">🌐</div><div><div style="font-size:.55rem;letter-spacing:2px;font-weight:700;text-transform:uppercase;color:var(--g)">Consulting</div><h4 style="font-size:.92rem;font-weight:800;color:var(--nd);line-height:1.3">메타글로벌 파트너스(주)</h4></div></div>
+<div style="font-size:.72rem;color:var(--g5);margin-bottom:.2rem"><b style="color:var(--g7)">대표:</b> 장진수</div>
+<div style="font-size:.72rem;color:var(--g5);margin-bottom:.6rem"><b style="color:var(--g7)">분야:</b> 글로벌 컨설팅</div>
+<p style="font-size:.73rem;color:var(--g5);line-height:1.6;margin-bottom:.8rem">글로벌 비즈니스 컨설팅 전문. 해외 진출, 무역 자문, 파트너십 구축.</p>
+<div style="display:flex;gap:4px;flex-wrap:wrap"><span style="padding:2px 8px;border-radius:4px;background:rgba(33,150,243,.06);font-size:.6rem;color:#1976d2;font-weight:600">컨설팅</span><span style="padding:2px 8px;border-radius:4px;background:rgba(184,137,46,.06);font-size:.6rem;color:var(--g);font-weight:600">글로벌</span></div>
+</div><a href="#contact" style="display:block;padding:.55rem;background:var(--g1);text-align:center;font-size:.72rem;font-weight:600;color:var(--nm);text-decoration:none;transition:all .3s" onmouseover="this.style.background='var(--nd)';this.style.color='var(--w)'" onmouseout="this.style.background='var(--g1)';this.style.color='var(--nm)'">비즈니스 연결 문의 →</a></div>
+
+<!-- 법무사 정철석 -->
+<div class="biz-card" data-bc="pro" style="background:var(--w);border-radius:var(--r);overflow:hidden;border:1px solid var(--g2);transition:all .35s" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 40px rgba(10,31,53,.1)';this.style.borderColor='rgba(184,137,46,.3)'" onmouseout="this.style.transform='';this.style.boxShadow='';this.style.borderColor='var(--g2)'">
+<div style="padding:1.4rem"><div style="display:flex;align-items:center;gap:.8rem;margin-bottom:.8rem"><div style="width:44px;height:44px;border-radius:10px;background:linear-gradient(135deg,#efebe9,#d7ccc8);display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0">⚖️</div><div><div style="font-size:.55rem;letter-spacing:2px;font-weight:700;text-transform:uppercase;color:var(--g)">Legal</div><h4 style="font-size:.92rem;font-weight:800;color:var(--nd);line-height:1.3">법무사 정철석 사무소</h4></div></div>
+<div style="font-size:.72rem;color:var(--g5);margin-bottom:.2rem"><b style="color:var(--g7)">법무사:</b> 정철석 부총무</div>
+<div style="font-size:.72rem;color:var(--g5);margin-bottom:.6rem"><b style="color:var(--g7)">분야:</b> 법률 · 등기 · 소송</div>
+<p style="font-size:.73rem;color:var(--g5);line-height:1.6;margin-bottom:.8rem">부동산 등기, 법인 설립, 소송 대리. 기업 법률 자문 제공.</p>
+<div style="display:flex;gap:4px;flex-wrap:wrap"><span style="padding:2px 8px;border-radius:4px;background:rgba(121,85,72,.06);font-size:.6rem;color:#5d4037;font-weight:600">법률</span><span style="padding:2px 8px;border-radius:4px;background:rgba(26,75,122,.06);font-size:.6rem;color:var(--nm);font-weight:600">등기</span></div>
+</div><a href="#contact" style="display:block;padding:.55rem;background:var(--g1);text-align:center;font-size:.72rem;font-weight:600;color:var(--nm);text-decoration:none;transition:all .3s" onmouseover="this.style.background='var(--nd)';this.style.color='var(--w)'" onmouseout="this.style.background='var(--g1)';this.style.color='var(--nm)'">비즈니스 연결 문의 →</a></div>
+
+<!-- 진해어린이집 -->
+<div class="biz-card" data-bc="edu" style="background:var(--w);border-radius:var(--r);overflow:hidden;border:1px solid var(--g2);transition:all .35s" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 40px rgba(10,31,53,.1)';this.style.borderColor='rgba(184,137,46,.3)'" onmouseout="this.style.transform='';this.style.boxShadow='';this.style.borderColor='var(--g2)'">
+<div style="padding:1.4rem"><div style="display:flex;align-items:center;gap:.8rem;margin-bottom:.8rem"><div style="width:44px;height:44px;border-radius:10px;background:linear-gradient(135deg,#f3e5f5,#e1bee7);display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0">🎒</div><div><div style="font-size:.55rem;letter-spacing:2px;font-weight:700;text-transform:uppercase;color:var(--g)">Education</div><h4 style="font-size:.92rem;font-weight:800;color:var(--nd);line-height:1.3">진해어린이집</h4></div></div>
+<div style="font-size:.72rem;color:var(--g5);margin-bottom:.2rem"><b style="color:var(--g7)">원장:</b> 공권세 회계</div>
+<div style="font-size:.72rem;color:var(--g5);margin-bottom:.6rem"><b style="color:var(--g7)">분야:</b> 교육 · 보육</div>
+<p style="font-size:.73rem;color:var(--g5);line-height:1.6;margin-bottom:.8rem">영유아 보육 전문기관. 다문화가정 자녀 보육 프로그램 운영.</p>
+<div style="display:flex;gap:4px;flex-wrap:wrap"><span style="padding:2px 8px;border-radius:4px;background:rgba(156,39,176,.06);font-size:.6rem;color:#7b1fa2;font-weight:600">교육</span><span style="padding:2px 8px;border-radius:4px;background:rgba(26,75,122,.06);font-size:.6rem;color:var(--nm);font-weight:600">보육</span></div>
+</div><a href="#contact" style="display:block;padding:.55rem;background:var(--g1);text-align:center;font-size:.72rem;font-weight:600;color:var(--nm);text-decoration:none;transition:all .3s" onmouseover="this.style.background='var(--nd)';this.style.color='var(--w)'" onmouseout="this.style.background='var(--g1)';this.style.color='var(--nm)'">비즈니스 연결 문의 →</a></div>
+
+<!-- 엘림G선교회 -->
+<div class="biz-card" data-bc="svc" style="background:var(--w);border-radius:var(--r);overflow:hidden;border:1px solid var(--g2);transition:all .35s" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 40px rgba(10,31,53,.1)';this.style.borderColor='rgba(184,137,46,.3)'" onmouseout="this.style.transform='';this.style.boxShadow='';this.style.borderColor='var(--g2)'">
+<div style="padding:1.4rem"><div style="display:flex;align-items:center;gap:.8rem;margin-bottom:.8rem"><div style="width:44px;height:44px;border-radius:10px;background:linear-gradient(135deg,#e8eaf6,#c5cae9);display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0">✝️</div><div><div style="font-size:.55rem;letter-spacing:2px;font-weight:700;text-transform:uppercase;color:var(--g)">Mission · Consulting</div><h4 style="font-size:.92rem;font-weight:800;color:var(--nd);line-height:1.3">엘림G선교회</h4></div></div>
+<div style="font-size:.72rem;color:var(--g5);margin-bottom:.2rem"><b style="color:var(--g7)">대표:</b> 한진준 목사</div>
+<div style="font-size:.72rem;color:var(--g5);margin-bottom:.6rem"><b style="color:var(--g7)">분야:</b> 이주민 선교 · 글로컬 네트워크</div>
+<p style="font-size:.73rem;color:var(--g5);line-height:1.6;margin-bottom:.8rem">18개국 이주민 네트워크 운영. BAM(Business As Mission) 프로젝트, 글로컬 인재 양성.</p>
+<div style="display:flex;gap:4px;flex-wrap:wrap"><span style="padding:2px 8px;border-radius:4px;background:rgba(63,81,181,.06);font-size:.6rem;color:#283593;font-weight:600">선교</span><span style="padding:2px 8px;border-radius:4px;background:rgba(184,137,46,.06);font-size:.6rem;color:var(--g);font-weight:600">글로컬</span></div>
+</div><a href="#contact" style="display:block;padding:.55rem;background:var(--g1);text-align:center;font-size:.72rem;font-weight:600;color:var(--nm);text-decoration:none;transition:all .3s" onmouseover="this.style.background='var(--nd)';this.style.color='var(--w)'" onmouseout="this.style.background='var(--g1)';this.style.color='var(--nm)'">비즈니스 연결 문의 →</a></div>
+
+</div>
+</div>
+</section>
+
+<!-- ==================== SECTION 4: 중소상공인 연결 ==================== -->
+<section class="sec" style="background:var(--wm)" id="smallbiz">
+<div class="si">
+<div class="sh rv">
+<span class="sl">Small Business Bridge</span>
+<h2 class="st" data-i="sb_t">💼 중소상공인 연결</h2>
+<p class="sd" data-i="sb_d">CBMC 기업인 네트워크의 전문성과 자원을 중소상공인과 나눕니다</p>
+</div>
+<div style="display:grid;grid-template-columns:repeat(4,1fr);gap:1.2rem" class="rv">
+<div style="padding:1.8rem 1.3rem;border-radius:var(--r);background:var(--w);border:2px solid var(--g2);text-align:center;transition:all .35s" onmouseover="this.style.borderColor='var(--gl)';this.style.transform='translateY(-4px)';this.style.boxShadow='0 8px 30px rgba(184,137,46,.08)'" onmouseout="this.style.borderColor='var(--g2)';this.style.transform='';this.style.boxShadow=''">
+<div style="font-size:2rem;margin-bottom:.6rem">📣</div>
+<h4 style="font-size:.88rem;font-weight:800;color:var(--nd);margin-bottom:.4rem" data-i="sb1t">기업 네트워크 활용</h4>
+<p style="font-size:.73rem;color:var(--g5);line-height:1.7" data-i="sb1d">대기업·중견기업 회원과의 거래 기회. CBMC 네트워크를 통해 신규 거래처를 확보합니다.</p>
+</div>
+<div style="padding:1.8rem 1.3rem;border-radius:var(--r);background:var(--w);border:2px solid var(--g2);text-align:center;transition:all .35s" onmouseover="this.style.borderColor='var(--gl)';this.style.transform='translateY(-4px)';this.style.boxShadow='0 8px 30px rgba(184,137,46,.08)'" onmouseout="this.style.borderColor='var(--g2)';this.style.transform='';this.style.boxShadow=''">
+<div style="font-size:2rem;margin-bottom:.6rem">🧠</div>
+<h4 style="font-size:.88rem;font-weight:800;color:var(--nd);margin-bottom:.4rem" data-i="sb2t">전문가 자문</h4>
+<p style="font-size:.73rem;color:var(--g5);line-height:1.7" data-i="sb2d">법률(정철석 법무사), 의료(임성택 한의박사), 경영 컨설팅 등 각 분야 전문가의 무료 자문.</p>
+</div>
+<div style="padding:1.8rem 1.3rem;border-radius:var(--r);background:var(--w);border:2px solid var(--g2);text-align:center;transition:all .35s" onmouseover="this.style.borderColor='var(--gl)';this.style.transform='translateY(-4px)';this.style.boxShadow='0 8px 30px rgba(184,137,46,.08)'" onmouseout="this.style.borderColor='var(--g2)';this.style.transform='';this.style.boxShadow=''">
+<div style="font-size:2rem;margin-bottom:.6rem">🤝</div>
+<h4 style="font-size:.88rem;font-weight:800;color:var(--nd);margin-bottom:.4rem" data-i="sb3t">상호 거래 우선</h4>
+<p style="font-size:.73rem;color:var(--g5);line-height:1.7" data-i="sb3d">CBMC 회원 기업이 소상공인 제품·서비스를 우선 이용. 인쇄, 조명, 식자재 등 실질적 거래.</p>
+</div>
+<div style="padding:1.8rem 1.3rem;border-radius:var(--r);background:var(--w);border:2px solid var(--g2);text-align:center;transition:all .35s" onmouseover="this.style.borderColor='var(--gl)';this.style.transform='translateY(-4px)';this.style.boxShadow='0 8px 30px rgba(184,137,46,.08)'" onmouseout="this.style.borderColor='var(--g2)';this.style.transform='';this.style.boxShadow=''">
+<div style="font-size:2rem;margin-bottom:.6rem">📋</div>
+<h4 style="font-size:.88rem;font-weight:800;color:var(--nd);margin-bottom:.4rem" data-i="sb4t">창업 멘토링</h4>
+<p style="font-size:.73rem;color:var(--g5);line-height:1.7" data-i="sb4d">사업 계획서 검토, 마케팅 전략, 자금 조달 안내. 경험 많은 기업인의 실전 노하우를 전수합니다.</p>
+</div>
+</div>
+<div class="rv" style="text-align:center;margin-top:2rem">
+<a href="#contact" style="display:inline-block;padding:14px 32px;border-radius:28px;background:var(--g);color:var(--w);font-size:.85rem;font-weight:700;text-decoration:none;transition:all .3s" onmouseover="this.style.background='var(--gl)'" onmouseout="this.style.background='var(--g)'">💼 소상공인 네트워킹 문의</a>
+</div>
+</div>
+</section>
+
+<!-- ==================== SECTION 5: 이주민 연계 ==================== -->
+<section class="sec" style="background:linear-gradient(135deg,#0a1f35 0%,#122d4a 100%);color:var(--w)" id="migrant">
+<div class="si">
+<div class="sh rv">
+<span class="sl" style="color:var(--gl)">Migrant Business Bridge</span>
+<h2 class="st" style="color:var(--w)" data-i="mg_t">🌏 이주민 비즈니스 연계</h2>
+<p class="sd" style="color:rgba(255,255,255,.5)" data-i="mg_d">꽁딘 대표와 한진준 목사가 함께 운영하는 한-베 비즈니스 브릿지</p>
+</div>
+
+<!-- 3대 서비스 -->
+<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-bottom:2.5rem" class="rv">
+<div style="padding:2rem;border-radius:var(--r);background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);transition:all .35s" onmouseover="this.style.borderColor='rgba(184,137,46,.3)';this.style.transform='translateY(-5px)'" onmouseout="this.style.borderColor='rgba(255,255,255,.08)';this.style.transform=''">
+<div style="font-size:2rem;margin-bottom:.8rem">🇻🇳</div>
+<h4 style="font-size:1rem;font-weight:800;color:var(--w);margin-bottom:.5rem" data-i="mg1t">베트남 무역 연계</h4>
+<p style="font-size:.78rem;color:rgba(255,255,255,.55);line-height:1.7" data-i="mg1d">한국 ↔ 베트남 수출입 연결. 현지 파트너 매칭, 통역·통관 지원, 시장 조사, 바이어 발굴을 원스톱으로 제공합니다.</p>
+</div>
+<div style="padding:2rem;border-radius:var(--r);background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);transition:all .35s" onmouseover="this.style.borderColor='rgba(184,137,46,.3)';this.style.transform='translateY(-5px)'" onmouseout="this.style.borderColor='rgba(255,255,255,.08)';this.style.transform=''">
+<div style="font-size:2rem;margin-bottom:.8rem">👷</div>
+<h4 style="font-size:1rem;font-weight:800;color:var(--w);margin-bottom:.5rem" data-i="mg2t">이주민 인력 소개</h4>
+<p style="font-size:.78rem;color:rgba(255,255,255,.55);line-height:1.7" data-i="mg2d">제조업·서비스업 이주민 인력 매칭. 한국어 교육 연계, 체류 상담 안내, 직업 훈련 프로그램을 통해 기업과 인력을 연결합니다.</p>
+</div>
+<div style="padding:2rem;border-radius:var(--r);background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);transition:all .35s" onmouseover="this.style.borderColor='rgba(184,137,46,.3)';this.style.transform='translateY(-5px)'" onmouseout="this.style.borderColor='rgba(255,255,255,.08)';this.style.transform=''">
+<div style="font-size:2rem;margin-bottom:.8rem">🤝</div>
+<h4 style="font-size:1rem;font-weight:800;color:var(--w);margin-bottom:.5rem" data-i="mg3t">네트워킹 · 문화 교류</h4>
+<p style="font-size:.78rem;color:rgba(255,255,255,.55);line-height:1.7" data-i="mg3d">18개국 이주민 사업가 교류, 다문화 식사 모임, 언어 교환, 창업 멘토링. 비즈니스를 넘어 진정한 교제와 돌봄의 공동체.</p>
+</div>
+</div>
+
+<!-- 지원 서비스 -->
+<div class="rv" style="padding:1.5rem 2rem;background:rgba(184,137,46,.08);border-radius:var(--r);border:1px solid rgba(184,137,46,.2);margin-bottom:2rem">
+<h4 style="font-size:.85rem;font-weight:700;color:var(--gl);margin-bottom:.8rem">📌 지원 서비스</h4>
+<div style="display:grid;grid-template-columns:repeat(4,1fr);gap:1rem">
+<div style="font-size:.75rem;color:rgba(255,255,255,.6)"><b style="color:var(--gl)">한국어 교육</b><br>기초~중급 과정</div>
+<div style="font-size:.75rem;color:rgba(255,255,255,.6)"><b style="color:var(--gl)">통역 서비스</b><br>베트남·영어 통역</div>
+<div style="font-size:.75rem;color:rgba(255,255,255,.6)"><b style="color:var(--gl)">비자 상담</b><br>체류 자격 안내</div>
+<div style="font-size:.75rem;color:rgba(255,255,255,.6)"><b style="color:var(--gl)">직업 훈련</b><br>기술 교육 연계</div>
+</div>
+</div>
+
+<!-- 국가 배지 -->
+<div class="rv" style="text-align:center">
+<p style="font-size:.7rem;color:rgba(255,255,255,.35);margin-bottom:.8rem">연결 국가 네트워크</p>
+<div style="display:inline-flex;gap:.5rem;flex-wrap:wrap;justify-content:center">
+<span style="padding:4px 12px;border-radius:12px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);font-size:.7rem;color:rgba(255,255,255,.6)">🇻🇳 베트남</span>
+<span style="padding:4px 12px;border-radius:12px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);font-size:.7rem;color:rgba(255,255,255,.6)">🇮🇩 인도네시아</span>
+<span style="padding:4px 12px;border-radius:12px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);font-size:.7rem;color:rgba(255,255,255,.6)">🇵🇭 필리핀</span>
+<span style="padding:4px 12px;border-radius:12px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);font-size:.7rem;color:rgba(255,255,255,.6)">🇰🇭 캄보디아</span>
+<span style="padding:4px 12px;border-radius:12px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);font-size:.7rem;color:rgba(255,255,255,.6)">🇳🇵 네팔</span>
+<span style="padding:4px 12px;border-radius:12px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);font-size:.7rem;color:rgba(255,255,255,.6)">🇺🇿 우즈베키스탄</span>
+<span style="padding:4px 12px;border-radius:12px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);font-size:.7rem;color:rgba(255,255,255,.6)">🇧🇩 방글라데시</span>
+<span style="padding:4px 12px;border-radius:12px;background:rgba(184,137,46,.1);border:1px solid rgba(184,137,46,.25);font-size:.7rem;color:var(--gl);font-weight:600">+11개국</span>
+</div>
+</div>
+</div>
+</section>
+
+<!-- ==================== SECTION 6: 운영진 ==================== -->
+<section class="sec" style="background:var(--w)" id="team">
+<div class="si">
+<div class="sh rv">
+<span class="sl">Leadership</span>
+<h2 class="st" data-i="tm_t">운영진</h2>
+<p class="sd" data-i="tm_d">글로컬 비즈니스 브릿지를 이끄는 리더들</p>
+</div>
+<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;max-width:800px;margin:0 auto" class="rv">
+<!-- 꽁딘 -->
+<div style="text-align:center">
+<div style="width:130px;height:130px;border-radius:50%;overflow:hidden;margin:0 auto 1rem;border:3px solid var(--gl)">
+<img src="img-kkong.jpg" alt="꽁딘 대표" style="width:100%;height:100%;object-fit:cover;object-position:center top">
+</div>
+<h4 style="font-size:.95rem;font-weight:800;color:var(--nd);margin-bottom:.2rem">꽁딘 대표</h4>
+<p style="font-size:.72rem;color:var(--g);font-weight:600;margin-bottom:.3rem">한-베 비즈니스 브릿지</p>
+<p style="font-size:.72rem;color:var(--g5);line-height:1.6">베트남 출신 CBMC 새 회원.<br>무역 연계·인력 매칭 총괄</p>
+</div>
+<!-- 한진준 -->
+<div style="text-align:center">
+<div style="width:130px;height:130px;border-radius:50%;overflow:hidden;margin:0 auto 1rem;border:3px solid var(--gl)">
+<img src="img-han.jpg" alt="한진준 목사" style="width:100%;height:100%;object-fit:cover;object-position:center top">
+</div>
+<h4 style="font-size:.95rem;font-weight:800;color:var(--nd);margin-bottom:.2rem">한진준 목사</h4>
+<p style="font-size:.72rem;color:var(--g);font-weight:600;margin-bottom:.3rem">엘림G선교회 · CBMC 고문</p>
+<p style="font-size:.72rem;color:var(--g5);line-height:1.6">18개국 이주민 네트워크 운영.<br>글로컬 비전 · 전략 총괄</p>
+</div>
+<!-- 배병옥 -->
+<div style="text-align:center">
+<div style="width:130px;height:130px;border-radius:50%;overflow:hidden;margin:0 auto 1rem;border:3px solid var(--g2)">
+<img src="img-bae.jpg" alt="배병옥 회장" style="width:100%;height:100%;object-fit:cover;object-position:center top">
+</div>
+<h4 style="font-size:.95rem;font-weight:800;color:var(--nd);margin-bottom:.2rem">배병옥 회장</h4>
+<p style="font-size:.72rem;color:var(--g);font-weight:600;margin-bottom:.3rem">CBMC 김해한마음지회</p>
+<p style="font-size:.72rem;color:var(--g5);line-height:1.6">삼성생명 / 네이처셀.<br>기업인 네트워킹 총괄</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- ==================== SECTION 7: 성과·시너지 ==================== -->
+<section style="background:linear-gradient(135deg,var(--nd),var(--nm));padding:60px 2.5rem;color:var(--w)" id="metrics">
+<div class="si">
+<div style="display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;text-align:center;margin-bottom:3rem" class="rv">
+<div style="padding:1.2rem"><div style="font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,4vw,2.8rem);font-weight:700;color:var(--gl);line-height:1" data-count="16">0</div><div style="font-size:.82rem;color:rgba(255,255,255,.7);font-weight:500;margin-top:.4rem">회원 기업</div></div>
+<div style="padding:1.2rem"><div style="font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,4vw,2.8rem);font-weight:700;color:var(--gl);line-height:1" data-count="150">0</div><div style="font-size:.82rem;color:rgba(255,255,255,.7);font-weight:500;margin-top:.4rem">누적 포럼</div></div>
+<div style="padding:1.2rem"><div style="font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,4vw,2.8rem);font-weight:700;color:var(--gl);line-height:1" data-count="8">0</div><div style="font-size:.82rem;color:rgba(255,255,255,.7);font-weight:500;margin-top:.4rem">업종 분야</div></div>
+<div style="padding:1.2rem"><div style="font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,4vw,2.8rem);font-weight:700;color:var(--gl);line-height:1" data-count="18">0</div><div style="font-size:.82rem;color:rgba(255,255,255,.7);font-weight:500;margin-top:.4rem">연결 국가</div></div>
+</div>
+
+<!-- 시너지 -->
+<div style="display:grid;grid-template-columns:repeat(4,1fr);gap:1rem" class="rv">
+<div style="padding:1.5rem 1rem;border-radius:var(--r);background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);text-align:center">
+<div style="font-size:1.6rem;margin-bottom:.5rem">📣</div>
+<h4 style="font-size:.82rem;font-weight:700;color:var(--w);margin-bottom:.3rem">공동 마케팅</h4>
+<p style="font-size:.68rem;color:rgba(255,255,255,.45);line-height:1.6">교차 홍보로 마케팅 비용 절감</p>
+</div>
+<div style="padding:1.5rem 1rem;border-radius:var(--r);background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);text-align:center">
+<div style="font-size:1.6rem;margin-bottom:.5rem">🤝</div>
+<h4 style="font-size:.82rem;font-weight:700;color:var(--w);margin-bottom:.3rem">상호 거래 우선</h4>
+<p style="font-size:.68rem;color:rgba(255,255,255,.45);line-height:1.6">회원 기업 우선 거래로 매출 증대</p>
+</div>
+<div style="padding:1.5rem 1rem;border-radius:var(--r);background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);text-align:center">
+<div style="font-size:1.6rem;margin-bottom:.5rem">🧠</div>
+<h4 style="font-size:.82rem;font-weight:700;color:var(--w);margin-bottom:.3rem">전문 지식 교류</h4>
+<p style="font-size:.68rem;color:rgba(255,255,255,.45);line-height:1.6">법률·의료·경영 전문가 무료 자문</p>
+</div>
+<div style="padding:1.5rem 1rem;border-radius:var(--r);background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);text-align:center">
+<div style="font-size:1.6rem;margin-bottom:.5rem">🛡️</div>
+<h4 style="font-size:.82rem;font-weight:700;color:var(--w);margin-bottom:.3rem">신뢰 기반 네트워크</h4>
+<p style="font-size:.68rem;color:rgba(255,255,255,.45);line-height:1.6">기도와 교제로 쌓은 신뢰가 기반</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- ==================== SECTION 8: 문의 폼 ==================== -->
+<section class="sec" style="background:var(--wm)" id="contact">
+<div class="si">
+<div class="sh rv">
+<span class="sl">Contact Us</span>
+<h2 class="st" data-i="ct_t">비즈니스 연결 문의</h2>
+<p class="sd" data-i="ct_d">기업 네트워킹, 중소상공인 연결, 이주민 연계에 대해 문의해 주세요</p>
+</div>
+<div style="max-width:600px;margin:0 auto" class="rv">
+<form id="biz-form" name="biz-bridge-contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+<input type="hidden" name="form-name" value="biz-bridge-contact">
+<p style="display:none"><label>봇 방지: <input name="bot-field"></label></p>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1rem">
+<div><label style="font-size:.72rem;font-weight:700;color:var(--nd);display:block;margin-bottom:.3rem">이름 *</label><input type="text" name="name" required style="width:100%;padding:11px 14px;border:1.5px solid var(--g2);border-radius:var(--rs);font-size:.85rem;font-family:inherit;transition:border-color .3s" onfocus="this.style.borderColor='#b8892e'" onblur="this.style.borderColor='#e5e3de'"></div>
+<div><label style="font-size:.72rem;font-weight:700;color:var(--nd);display:block;margin-bottom:.3rem">연락처 *</label><input type="tel" name="phone" required placeholder="010-0000-0000" style="width:100%;padding:11px 14px;border:1.5px solid var(--g2);border-radius:var(--rs);font-size:.85rem;font-family:inherit;transition:border-color .3s" onfocus="this.style.borderColor='#b8892e'" onblur="this.style.borderColor='#e5e3de'"></div>
+</div>
+<div style="margin-bottom:1rem"><label style="font-size:.72rem;font-weight:700;color:var(--nd);display:block;margin-bottom:.3rem">문의 유형</label>
+<select name="type" id="cf-type" style="width:100%;padding:11px 14px;border:1.5px solid var(--g2);border-radius:var(--rs);font-size:.85rem;font-family:inherit;background:var(--w);transition:border-color .3s" onfocus="this.style.borderColor='#b8892e'" onblur="this.style.borderColor='#e5e3de'" onchange="document.getElementById('biz-extra').style.display=(this.value==='이주민 연계'||this.value==='기업 네트워킹'||this.value==='중소상공인 연결')?'block':'none'">
+<option value="기업 네트워킹">🏢 기업 네트워킹</option>
+<option value="중소상공인 연결">💼 중소상공인 연결</option>
+<option value="이주민 연계">🌏 이주민 연계 (무역·인력)</option>
+<option value="기타">기타 문의</option>
+</select></div>
+<div id="biz-extra" style="margin-bottom:1rem;display:none"><label style="font-size:.72rem;font-weight:700;color:var(--nd);display:block;margin-bottom:.3rem">업종 / 사업 분야</label><input type="text" name="biz-field" placeholder="예: 음식점, IT, 제조업, 수출입 등" style="width:100%;padding:11px 14px;border:1.5px solid var(--g2);border-radius:var(--rs);font-size:.85rem;font-family:inherit;transition:border-color .3s" onfocus="this.style.borderColor='#b8892e'" onblur="this.style.borderColor='#e5e3de'"></div>
+<div style="margin-bottom:1rem"><label style="font-size:.72rem;font-weight:700;color:var(--nd);display:block;margin-bottom:.3rem">메시지</label><textarea name="message" rows="4" placeholder="문의 내용을 입력해 주세요." style="width:100%;padding:11px 14px;border:1.5px solid var(--g2);border-radius:var(--rs);font-size:.85rem;font-family:inherit;resize:vertical;transition:border-color .3s" onfocus="this.style.borderColor='#b8892e'" onblur="this.style.borderColor='#e5e3de'"></textarea></div>
+<button type="submit" style="width:100%;padding:14px;border:none;border-radius:var(--rs);background:var(--g);color:var(--w);font-size:.92rem;font-weight:700;font-family:inherit;cursor:pointer;transition:all .3s" onmouseover="this.style.background='var(--gl)'" onmouseout="this.style.background='var(--g)'">문의 보내기</button>
+<div id="cf-result" style="display:none;margin-top:1rem;padding:1rem;border-radius:var(--rs);text-align:center;font-size:.85rem"></div>
+<p style="text-align:center;margin-top:.6rem;font-size:.65rem;color:var(--g5)">문의 접수 후 담당자에게 자동 연결됩니다 | 📞 010-2083-3106</p>
+</form>
+</div>
+</div>
+</section>
+
+<!-- FOOTER -->
+<footer style="background:var(--nd);padding:40px 2.5rem 25px;color:rgba(255,255,255,.4)">
+<div class="si" style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem">
+<div>
+<div style="font-family:'Nanum Myeongjo',serif;font-size:.95rem;font-weight:800;color:var(--w);margin-bottom:.3rem">글로컬 비즈니스 브릿지</div>
+<p style="font-size:.7rem;line-height:1.6">CBMC 김해한마음지회 × 엘림G선교회<br>📍 경남 김해시 장유로 167-23 반석인더스트리즈(주)</p>
+</div>
+<div style="text-align:right">
+<a href="https://gimhae-cbmc.netlify.app" target="_blank" style="display:inline-block;padding:8px 20px;border-radius:20px;background:rgba(184,137,46,.15);color:var(--gl);font-size:.75rem;font-weight:600;text-decoration:none;border:1px solid rgba(184,137,46,.3);margin-bottom:.5rem;transition:all .3s" onmouseover="this.style.background='var(--g)';this.style.color='var(--w)'" onmouseout="this.style.background='rgba(184,137,46,.15)';this.style.color='var(--gl)'">← CBMC 메인 사이트</a>
+<p style="font-size:.6rem;margin-top:.3rem">&copy; 2026 CBMC 김해한마음지회. All rights reserved.</p>
+</div>
+</div>
+</footer>
+
+<script>
+// Reveal animation
+const obs=new IntersectionObserver(e=>{e.forEach(el=>{if(el.isIntersecting){el.target.classList.add('vis');obs.unobserve(el.target)}})},{threshold:.15});
+document.querySelectorAll('.rv').forEach(el=>obs.observe(el));
+
+// Counter animation
+const cob=new IntersectionObserver(e=>{e.forEach(el=>{if(el.isIntersecting){const t=el.target,n=parseInt(t.dataset.count),s=t.textContent.includes('+')?'+':'';let c=0;const step=Math.max(1,Math.floor(n/40));const timer=setInterval(()=>{c+=step;if(c>=n){c=n;clearInterval(timer)}t.textContent=c+s},40);cob.unobserve(t)}})},{threshold:.5});
+document.querySelectorAll('[data-count]').forEach(c=>cob.observe(c));
+
+// Biz directory filter
+function filterBiz(cat){
+document.querySelectorAll('.biz-card').forEach(c=>{c.style.display=(cat==='all'||c.dataset.bc===cat)?'':'none'});
+document.querySelectorAll('.biz-tab').forEach(t=>{
+const isActive=(cat==='all'&&t.textContent.includes('전체'))||t.onclick.toString().includes("'"+cat+"'");
+if(cat==='all'&&t.textContent.includes('전체')){t.style.background='#0a1f35';t.style.color='#fff';t.classList.add('active')}
+else if(t.onclick&&t.onclick.toString().includes("'"+cat+"'")&&cat!=='all'){t.style.background='#0a1f35';t.style.color='#fff';t.classList.add('active')}
+else{t.style.background='transparent';t.style.color='#0a1f35';t.classList.remove('active')}
+});
+}
+
+// Form submission
+document.getElementById('biz-form').addEventListener('submit',function(e){
+e.preventDefault();
+const fd=new FormData(this);
+fetch('/',{method:'POST',body:fd}).then(r=>{
+const res=document.getElementById('cf-result');
+if(r.ok){res.style.display='block';res.style.background='rgba(76,175,80,.1)';res.style.color='#2e7d32';res.innerHTML='✅ 문의가 접수되었습니다. 빠른 시일 내에 연락드리겠습니다.';}
+else{res.style.display='block';res.style.background='rgba(244,67,54,.1)';res.style.color='#c62828';res.innerHTML='❌ 전송에 실패했습니다. 전화(010-2083-3106)로 문의해 주세요.';}
+}).catch(()=>{
+const res=document.getElementById('cf-result');
+res.style.display='block';res.style.background='rgba(244,67,54,.1)';res.style.color='#c62828';
+res.innerHTML='❌ 네트워크 오류. 전화(010-2083-3106)로 문의해 주세요.';
+});
+});
+
+// Language switch
+const i18n={
+ko:{hero_t:'기업인 · 중소상공인 · 이주민을<br>잇는 신뢰의 비즈니스 생태계',hero_d:'CBMC 김해한마음지회가 만드는 3자 연결 플랫폼.<br>신뢰와 기도로 연결된 비즈니스 파트너십을 경험하십시오.',vis_t:'3자 연결 비전',vis_d:'세 축이 서로 연결되어 시너지를 만드는 비즈니스 생태계',ent_t:'🏢 회원 기업 디렉토리',ent_d:'CBMC 김해한마음지회 신뢰 기반의 비즈니스 파트너를 만나보십시오',sb_t:'💼 중소상공인 연결',sb_d:'CBMC 기업인 네트워크의 전문성과 자원을 중소상공인과 나눕니다',mg_t:'🌏 이주민 비즈니스 연계',mg_d:'꽁딘 대표와 한진준 목사가 함께 운영하는 한-베 비즈니스 브릿지',tm_t:'운영진',tm_d:'글로컬 비즈니스 브릿지를 이끄는 리더들',ct_t:'비즈니스 연결 문의',ct_d:'기업 네트워킹, 중소상공인 연결, 이주민 연계에 대해 문의해 주세요'},
+en:{hero_t:'A Trusted Business Ecosystem<br>Connecting Enterprises · SMEs · Migrants',hero_d:'A three-way connection platform by CBMC Gimhae.<br>Experience business partnerships built on trust and prayer.',vis_t:'Three-Way Vision',vis_d:'A business ecosystem where three pillars connect to create synergy',ent_t:'🏢 Member Company Directory',ent_d:'Meet trusted business partners of CBMC Gimhae Hanmaeum',sb_t:'💼 Small Business Bridge',sb_d:'Sharing expertise and resources of CBMC enterprise network with small businesses',mg_t:'🌏 Migrant Business Bridge',mg_d:'Korea-Vietnam business bridge operated by Rep. Kkongdin & Pastor Han',tm_t:'Leadership',tm_d:'Leaders driving the Glocal Business Bridge',ct_t:'Business Inquiry',ct_d:'Contact us for enterprise networking, SME connections, or migrant business linkage'},
+vi:{hero_t:'H\u1ec7 sinh th\u00e1i kinh doanh tin c\u1eady<br>k\u1ebft n\u1ed1i Doanh nghi\u1ec7p · SME · Ng\u01b0\u1eddi nh\u1eadp c\u01b0',hero_d:'N\u1ec1n t\u1ea3ng k\u1ebft n\u1ed1i 3 b\u00ean c\u1ee7a CBMC Gimhae.<br>Tr\u1ea3i nghi\u1ec7m quan h\u1ec7 \u0111\u1ed1i t\u00e1c kinh doanh d\u1ef1a tr\u00ean ni\u1ec1m tin v\u00e0 l\u1eddi c\u1ea7u nguy\u1ec7n.',vis_t:'T\u1ea7m nh\u00ecn k\u1ebft n\u1ed1i 3 b\u00ean',vis_d:'H\u1ec7 sinh th\u00e1i kinh doanh n\u01a1i 3 tr\u1ee5 c\u1ed9t k\u1ebft n\u1ed1i t\u1ea1o hi\u1ec7u \u1ee9ng c\u1ed9ng h\u01b0\u1edfng',ent_t:'🏢 Danh m\u1ee5c doanh nghi\u1ec7p',ent_d:'G\u1eb7p g\u1ee1 c\u00e1c \u0111\u1ed1i t\u00e1c kinh doanh \u0111\u00e1ng tin c\u1eady',sb_t:'💼 K\u1ebft n\u1ed1i doanh nghi\u1ec7p nh\u1ecf',sb_d:'Chia s\u1ebb chuy\u00ean m\u00f4n v\u00e0 ngu\u1ed3n l\u1ef1c v\u1edbi doanh nghi\u1ec7p nh\u1ecf',mg_t:'🌏 K\u1ebft n\u1ed1i kinh doanh ng\u01b0\u1eddi nh\u1eadp c\u01b0',mg_d:'C\u1ea7u n\u1ed1i kinh doanh H\u00e0n-Vi\u1ec7t do \u0110\u1ea1i di\u1ec7n Kkongdin & M\u1ee5c s\u01b0 Han \u0111i\u1ec1u h\u00e0nh',tm_t:'Ban l\u00e3nh \u0111\u1ea1o',tm_d:'Nh\u1eefng nh\u00e0 l\u00e3nh \u0111\u1ea1o c\u1ee7a Glocal Business Bridge',ct_t:'Li\u00ean h\u1ec7 kinh doanh',ct_d:'Li\u00ean h\u1ec7 v\u1ec1 k\u1ebft n\u1ed1i doanh nghi\u1ec7p, SME ho\u1eb7c h\u1ee3p t\u00e1c ng\u01b0\u1eddi nh\u1eadp c\u01b0'}
+};
+let curLang='ko';
+function switchLang(lang){
+curLang=lang;
+document.querySelectorAll('.lang-sw button').forEach(b=>{b.classList.remove('active')});
+document.querySelectorAll('.lang-sw button').forEach(b=>{if((lang==='ko'&&b.textContent.includes('🇰🇷'))||(lang==='en'&&b.textContent.includes('🇺🇸'))||(lang==='vi'&&b.textContent.includes('🇻🇳')))b.classList.add('active')});
+const t=i18n[lang]||i18n.ko;
+document.querySelectorAll('[data-i]').forEach(el=>{if(t[el.dataset.i])el.innerHTML=t[el.dataset.i]});
+}
+</script>
+</body>
+</html>
