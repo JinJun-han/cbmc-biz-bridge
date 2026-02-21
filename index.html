@@ -134,15 +134,6 @@ img{max-width:100%;display:block}
 <a href="#smallbiz" style="padding:14px 28px;border-radius:28px;background:rgba(255,255,255,.08);color:rgba(255,255,255,.85);border:1px solid rgba(255,255,255,.18);font-size:.85rem;font-weight:600;text-decoration:none;transition:all .3s" onmouseover="this.style.background='rgba(255,255,255,.15)'" onmouseout="this.style.background='rgba(255,255,255,.08)'">💼 중소상공인 연결</a>
 <a href="#migrant" style="padding:14px 28px;border-radius:28px;background:rgba(255,255,255,.08);color:rgba(255,255,255,.85);border:1px solid rgba(255,255,255,.18);font-size:.85rem;font-weight:600;text-decoration:none;transition:all .3s" onmouseover="this.style.background='rgba(255,255,255,.15)'" onmouseout="this.style.background='rgba(255,255,255,.08)'">🌏 이주민 연계</a>
 </div>
-<!-- BGM Player -->
-<div id="bgm-wrap" style="margin-top:2rem;display:flex;align-items:center;justify-content:center;gap:.6rem;opacity:0;transition:opacity 1s ease 1.5s">
-<button id="bgm-btn" onclick="toggleBgm()" style="width:44px;height:44px;border-radius:50%;border:1.5px solid rgba(184,137,46,.4);background:rgba(184,137,46,.12);color:var(--gl);font-size:1.1rem;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .3s;backdrop-filter:blur(8px)" onmouseover="this.style.background='rgba(184,137,46,.25)'" onmouseout="this.style.background='rgba(184,137,46,.12)'">▶</button>
-<div style="text-align:left">
-<div style="font-size:.7rem;color:var(--gl);font-weight:600;letter-spacing:1px">🎵 빛나는 이유</div>
-<div style="font-size:.58rem;color:rgba(255,255,255,.35)">The Reason We Shine — CBMC CCM</div>
-</div>
-</div>
-<audio id="bgm" src="bgm.mp3" preload="auto" loop></audio>
 </div>
 </section>
 
@@ -522,18 +513,6 @@ img{max-width:100%;display:block}
 </footer>
 
 <script>
-// BGM Player
-const bgm=document.getElementById('bgm');
-const bgmBtn=document.getElementById('bgm-btn');
-const bgmWrap=document.getElementById('bgm-wrap');
-let bgmPlaying=false;
-function toggleBgm(){
-if(bgmPlaying){bgm.pause();bgmBtn.textContent='▶';bgmPlaying=false;}
-else{bgm.volume=0.3;bgm.play().then(()=>{bgmBtn.textContent='⏸';bgmPlaying=true}).catch(()=>{});}
-}
-// Show player after page load
-setTimeout(()=>{if(bgmWrap)bgmWrap.style.opacity='1'},500);
-
 // Reveal animation
 const obs=new IntersectionObserver(e=>{e.forEach(el=>{if(el.isIntersecting){el.target.classList.add('vis');obs.unobserve(el.target)}})},{threshold:.15});
 document.querySelectorAll('.rv').forEach(el=>obs.observe(el));
